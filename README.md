@@ -40,7 +40,7 @@ class TransactionSelectionState {
   + startInteraction()
 }
 
-interface State {
+class State <<interface>> {
   + insertCard(cardNumber: String)
   + enterPin(pin: String)
   + selectTransaction(t: Transaction)
@@ -55,7 +55,7 @@ IdleState --> ATM
 CardInsertedState --> ATM
 TransactionSelectionState --> ATM
 
-interface InputDevice {
+class InputDevice <<interface>> {
   + getInput(): String
 }
 class ConsoleInput
@@ -66,7 +66,7 @@ InputDevice <|.. ScreenInput
 InputDevice <|.. KeypadInput
 ATM --> InputDevice
 
-interface BankService {
+class BankService <<interface>> {
   + validateCard(cardNumber: String): boolean
   + validatePin(cardNumber: String, pin: String): boolean
   + debit(accountNumber: String, amount: int): boolean
@@ -79,7 +79,7 @@ BankService <|.. HDFCService
 BankService <|.. SBIService
 ATM --> BankService
 
-abstract class Transaction {
+class Transaction <<abstract>> {
   # accountNumber: String
   # bankService: BankService
   + Transaction(accountNumber: String, bankService: BankService)
