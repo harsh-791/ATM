@@ -1,0 +1,3 @@
+interface InputDevice {
+    String getInput();
+}
