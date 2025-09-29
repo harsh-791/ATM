@@ -1,4 +1,4 @@
-## ATM LLD - Class Diagram (Mermaid)
+## ATM LLD - Class Diagram
 
 ```mermaid
 classDiagram
@@ -103,3 +103,5 @@ TransactionSelectionState ..> Transaction : creates/executes
 WithdrawTransaction --> CashDispenser
 Transaction --> BankService
 ```
+
+
