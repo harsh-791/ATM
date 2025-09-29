@@ -103,8 +103,3 @@ TransactionSelectionState ..> Transaction : creates/executes
 WithdrawTransaction --> CashDispenser
 Transaction --> BankService
 ```
-
-### How to render
-
-- GitHub renders Mermaid diagrams automatically in `README.md`.
-- If viewing locally, use an IDE/extension that supports Mermaid (e.g., VS Code with Mermaid preview).
